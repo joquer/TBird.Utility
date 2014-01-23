@@ -59,7 +59,6 @@
     <Compile Include="Converters\BooleanToVisibilityCollapsedInvertedConverter.cs" />
     <Compile Include="CsvFileReader.cs" />
     <Compile Include="CvsFileWriter.cs" />
-    <Compile Include="DisplayFormatAttribute.cs" />
     <Compile Include="Enumerations\AdoNetUpdateProvider.cs" />
     <Compile Include="Enumerations\AdoNetValueProvider.cs" />
     <Compile Include="Enumerations\CsvValueProvider.cs" />

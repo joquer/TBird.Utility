@@ -111,9 +111,6 @@
     <Compile Include="..\TBird.Utility\CvsFileWriter.cs">
       <Link>CvsFileWriter.cs</Link>
     </Compile>
-    <Compile Include="..\TBird.Utility\DisplayFormatAttribute.cs">
-      <Link>DisplayFormatAttribute.cs</Link>
-    </Compile>
     <Compile Include="..\TBird.Utility\EnumUtilities.cs">
       <Link>EnumUtilities.cs</Link>
     </Compile>
