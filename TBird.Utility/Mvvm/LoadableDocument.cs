@@ -7,16 +7,9 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-#if !SILVERLIGHT
-#define NOT_SILVERLIGHT
-#endif
-
 namespace TBird.Utility.Mvvm
 {
-#if NOT_SILVERLIGHT
-    using System;
     using System.Diagnostics.Contracts;
-#endif
     using System.IO;
     using System.Xml.Linq;
 
@@ -51,10 +44,8 @@ namespace TBird.Utility.Mvvm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", Justification = "Arguments are validated by the Code Contracts.")]
         public static void Read(Stream stream, ILoadableObject data)
         {
-#if NOT_SILVERLIGHT
             Contract.Requires(stream != null);
             Contract.Requires(data != null);
-#endif
             XDocument doc = XDocument.Load(stream);
             data.Load(doc.Root);
         }

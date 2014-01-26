@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>TBird.Utility</id>
+    <version>0.1.1</version>
+    <title>TBird Utility Library</title>
+    <authors>Michael Glasgow</authors>
+    <owners>Mr Smarti Pantz LLC</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Contains general utility classes.</description>
+    <releaseNotes>Initial version after import from TFS.</releaseNotes>
+	<copyright>Copyright 2014 Mr Smarti Pantz LLC</copyright>
+    <tags>TBird Utility</tags>
+  </metadata>
+  <files>
+    <file src="TBird.Utility/bin/Release/TBird.Utility.dll" target="lib/net45/" />
+    <file src="TBird.Utility/bin/Release/TBird.Utility.pdb" target="lib/net45/" />
+    <file src="TBird.Utility.WinStore/bin/Release/TBird.Utility.WinStore.dll" target="lib/netcore45/TBird.Utility.dll" />
+    <file src="TBird.Utility.WinStore/bin/Release/TBird.Utility.WinStore.pdb" target="lib/netcore45/TBird.Utility.pdb" />
+    <file src="TBird.Utility.WP8/bin/Release/TBird.Utility.WP8.dll" target="lib/windowsphone8/TBird.Utility.dll" />
+    <file src="TBird.Utility.WP8/bin/Release/TBird.Utility.WP8.pdb" target="lib/windowsphone8/TBird.Utility.pdb" />
+  </files>
+</package>

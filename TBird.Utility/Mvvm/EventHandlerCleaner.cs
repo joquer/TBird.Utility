@@ -6,23 +6,16 @@
 //   Defines the EventHandlerCleaner type.
 // </summary>
 // -----------------------------------------------------------------------
-#if !SILVERLIGHT
-#define NOT_SILVERLIGHT
-#endif
 
-#if !SILVERLIGHT && !DEBUG
-#define CLEAN_EVENT_HANDLERS
-#endif
+#if !NETFX_CORE
 
 namespace TBird.Utility.Mvvm
 {
     using System;
     using System.Collections.Generic;
-#if NOT_SILVERLIGHT
     using System.Diagnostics;
     using System.Diagnostics.Contracts;
     using System.Globalization;
-#endif
     using System.Reflection;
 
     /// <summary>
@@ -67,10 +60,8 @@ namespace TBird.Utility.Mvvm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "object"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Justification = "AgumentValidation is handled by Code Contracts")]
         public static int CountEventHandlers(object eventObject)
         {
-#if NOT_SILVERLIGHT
             Contract.Requires(eventObject != null);
             Contract.Ensures(Contract.Result<int>() >= 0);
-#endif
             int count = 0;
             Type t = eventObject.GetType();
 
@@ -105,7 +96,6 @@ namespace TBird.Utility.Mvvm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", Justification = "Code Contracts validate the arguments.")]
         public static void ShowEventHandlers(object eventObject)
         {
-#if NOT_SILVERLIGHT
             Contract.Requires(eventObject != null);
             Type t = eventObject.GetType();
 
@@ -136,7 +126,6 @@ namespace TBird.Utility.Mvvm
                     }
                 }
             }
-#endif
         }
 
         /// <summary>
@@ -146,7 +135,6 @@ namespace TBird.Utility.Mvvm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", Justification = "Code Contracts validate the arguments.")]
         public static void RemoveEventHandlers(object eventObject)
         {
-#if NOT_SILVERLIGHT
             Contract.Requires(eventObject != null);
 
             if (!AllowHandlerRemoval)
@@ -175,7 +163,6 @@ namespace TBird.Utility.Mvvm
                     }
                 }
             }
-#endif
         }
 
         /// <summary>
@@ -188,9 +175,7 @@ namespace TBird.Utility.Mvvm
         /// <returns>The <see cref="FieldInfo"/> for the event with this name.</returns>
         private static FieldInfo FindField(Type t, string name)
         {
-#if NOT_SILVERLIGHT
             Contract.Requires(t != null);
-#endif
             FieldInfo fi = t.GetField(name, AllBindings);
             if (fi != null)
             {
@@ -212,9 +197,7 @@ namespace TBird.Utility.Mvvm
         /// <returns>A list of <see cref="FieldInfo"/> for all the events in this class and it's parent classes.</returns>
         private static List<FieldInfo> GetEventFieldInfo(Type t)
         {
-#if NOT_SILVERLIGHT
             Contract.Requires(t != null);
-#endif
             if (FieldCache.ContainsKey(t))
             {
                 return FieldCache[t];
@@ -235,3 +218,5 @@ namespace TBird.Utility.Mvvm
         }
     }
 }
+
+#endif

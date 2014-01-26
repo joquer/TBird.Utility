@@ -6,7 +6,7 @@
 
 namespace TBird.Utility
 {
-#if !NETFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
     using System.Diagnostics.CodeAnalysis;
 #endif
 
@@ -16,7 +16,7 @@ namespace TBird.Utility
     /// be a class it can't be a reference type, so this class wraps a boolean and allows
     /// it to be locked.
     /// </summary>
-#if !NETFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
     [ExcludeFromCodeCoverage]
 #endif
     public class LockObject

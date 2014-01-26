@@ -87,7 +87,7 @@
             return other.Value == this.Value && other.Name == this.Name && other.DisplayName == this.DisplayName;
         }
 
-#if !NETFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
         [ExcludeFromCodeCoverage]
 #endif
         public override int GetHashCode()

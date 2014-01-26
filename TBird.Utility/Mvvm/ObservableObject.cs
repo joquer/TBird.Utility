@@ -23,6 +23,7 @@ namespace TBird.Utility.Mvvm
 #if NOT_SILVERLIGHT
     using System.Diagnostics.Contracts;
 #endif
+    using System.Diagnostics.Contracts;
     using System.Globalization;
     using System.Linq.Expressions;
     using System.Reflection;

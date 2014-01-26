@@ -17,7 +17,9 @@ namespace TBird.Utility.Mvvm
 #if NOT_SILVERLIGHT
     using System.Diagnostics.Contracts;
 #endif
+    using System.Diagnostics.Contracts;
     using System.Linq;
+    using System.Reflection;
     using System.Threading;
 
     /// <summary>
@@ -70,9 +72,18 @@ namespace TBird.Utility.Mvvm
         {
             lock (this.lockObject)
             {
+#if NETFX_CORE
+                var subscriberTypes =
+                    subscriber.GetType()
+                              .GetTypeInfo()
+                              .ImplementedInterfaces
+                              .Where(i => i.GetTypeInfo().IsGenericType && i.GetGenericTypeDefinition() == typeof(ISubscriber<>));
+#else
                 var subscriberTypes =
                     subscriber.GetType().GetInterfaces().Where(
                         i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ISubscriber<>));
+#endif
+
                 foreach (Type t in subscriberTypes)
                 {
                     List<object> subscribers = this.GetSubscribers(t);
@@ -88,9 +99,15 @@ namespace TBird.Utility.Mvvm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", Justification = "Code Contracts validate the arguments.")]
         public void Unsubscribe(object subscriber)
         {
+#if NETFX_CORE
+            var subscriberTypes =
+                subscriber.GetType().GetTypeInfo().ImplementedInterfaces.Where(
+                    i => i.GetTypeInfo().IsGenericType && i.GetGenericTypeDefinition() == typeof(ISubscriber<>));
+#else
             var subscriberTypes =
                 subscriber.GetType().GetInterfaces().Where(
                     i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ISubscriber<>));
+#endif
             foreach (Type t in subscriberTypes)
             {
                 List<object> subscribers = this.GetSubscribers(t);

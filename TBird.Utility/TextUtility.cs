@@ -14,9 +14,7 @@ namespace TBird.Utility
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-#if NOT_SILVERLIGHT
     using System.Diagnostics.Contracts;
-#endif
     using System.Linq;
     using System.Text;
 

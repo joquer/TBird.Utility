@@ -19,7 +19,7 @@
     /// </summary>
     /// <typeparam name="TEnumeration">The type of the enumeration.</typeparam>
     [DebuggerDisplay("{Name}({Value}) - {DisplayName}")]
-#if !NETFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
     [Serializable]
 #endif
     public abstract class Enumeration<TEnumeration> : IComparable<TEnumeration>, IEquatable<TEnumeration>
@@ -113,6 +113,7 @@
             }
         }
 
+#if !NETFX_CORE
         /// <summary>
         /// Gets the values for an Enumeration class.  This routine returns a list of all the values in the Enumeration,
         /// as a list <see cref="EnumerationValue"/>.  This is useful for loading and saving enumerations as well as
@@ -135,6 +136,7 @@
                         PropertyValues = EnumerationValue.GetPropertyValues<TEnumeration>(e)
                     });
         }
+#endif
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", Justification = "Code Contract validates argument.")]
         [Pure]

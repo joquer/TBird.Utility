@@ -145,7 +145,7 @@ namespace TBird.Utility
         /// <summary>
         /// Finalizes an instance of the <see cref="CsvFileReader"/> class. 
         /// </summary>
-#if !NETFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
         [ExcludeFromCodeCoverage]
 #endif
         ~CsvFileReader()

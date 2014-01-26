@@ -9,7 +9,9 @@
 
 namespace TBird.Utility.Mvvm
 {
+#if !WINDOWS_PHONE
     using System.Diagnostics.CodeAnalysis;
+#endif
     using System.Diagnostics.Contracts;
 
     [ContractClass(typeof(IEventAggregatorContract))]
@@ -37,7 +39,9 @@ namespace TBird.Utility.Mvvm
         void Publish<TEvent>(object publisher, TEvent eventToPublish);
     }
 
+#if !WINDOWS_PHONE && !NETFX_CORE
     [ExcludeFromCodeCoverage]
+#endif
     [ContractClassFor(typeof(IEventAggregator))]
     public abstract class IEventAggregatorContract : IEventAggregator
     {

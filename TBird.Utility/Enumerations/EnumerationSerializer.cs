@@ -5,7 +5,9 @@
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
+#if !NETFX_CORE
     [Serializable]
+#endif
     public class EnumerationSerializer<TEnumeration> : IXmlSerializable where TEnumeration : Enumeration<TEnumeration>
     {
         public EnumerationSerializer()

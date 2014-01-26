@@ -50,7 +50,7 @@
         /// <summary>
         /// Finalizes an instance of the <see cref="CsvFileWriter" /> class.
         /// </summary>
-#if !NETFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
         [ExcludeFromCodeCoverage]
 #endif
         ~CsvFileWriter()

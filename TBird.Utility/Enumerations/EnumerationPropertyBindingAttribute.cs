@@ -1,7 +1,7 @@
 ﻿namespace TBird.Utility.Enumerations
 {
     using System;
-#if !NEXTFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
     using System.Diagnostics.CodeAnalysis;
 #endif
 
@@ -10,7 +10,7 @@
     /// The database will be the same as the Property name, unless another value is specified in the
     /// <see cref="ColumnName"/> property.
     /// </summary>
-#if !NETFX_CORE
+#if !(NETFX_CORE || WINDOWS_PHONE)
     [ExcludeFromCodeCoverage]
 #endif
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]

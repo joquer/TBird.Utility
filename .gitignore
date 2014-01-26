@@ -40,10 +40,9 @@ obj/
 [Rr]elease*/
 Ankh.NoLoad
 
-# Ignore all packages while using package restore.
-packages\*
 # This line is for ignoring package folder on UNIX systems
 packages/*
+
 # Tooling
 _ReSharper*/
 *.resharper
