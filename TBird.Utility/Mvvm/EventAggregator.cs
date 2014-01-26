@@ -14,9 +14,6 @@ namespace TBird.Utility.Mvvm
 {
     using System;
     using System.Collections.Generic;
-#if NOT_SILVERLIGHT
-    using System.Diagnostics.Contracts;
-#endif
     using System.Diagnostics.Contracts;
     using System.Linq;
     using System.Reflection;

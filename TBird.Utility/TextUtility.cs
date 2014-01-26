@@ -99,7 +99,7 @@ namespace TBird.Utility
                 return 0;
             }
 
-            string digitsOnly = value.RemoveChars(new char[] { ',' });
+            string digitsOnly = value.RemoveChar(',');
             if (string.IsNullOrEmpty(digitsOnly))
             {
                 return 0;
@@ -137,7 +137,7 @@ namespace TBird.Utility
 
         public static double ParseDouble(string value)
         {
-            string noPercentSign = value.RemoveChars(new char[] { '%' });
+            string noPercentSign = value.RemoveChar('%');
             double result;
             if (double.TryParse(noPercentSign, out result))
             {

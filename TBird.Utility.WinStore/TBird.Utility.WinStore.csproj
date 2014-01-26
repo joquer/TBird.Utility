@@ -180,6 +180,9 @@
     <Compile Include="..\TBird.Utility\TypeHelper.cs">
       <Link>TypeHelper.cs</Link>
     </Compile>
+    <Compile Include="..\TBird.Utility\TypeUtils.cs">
+      <Link>TypeUtils.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">

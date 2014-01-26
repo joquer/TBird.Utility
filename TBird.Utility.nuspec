@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>TBird.Utility</id>
-    <version>0.1.1</version>
+    <version>0.1.3</version>
     <title>TBird Utility Library</title>
     <authors>Michael Glasgow</authors>
     <owners>Mr Smarti Pantz LLC</owners>
@@ -17,7 +17,7 @@
     <file src="TBird.Utility/bin/Release/TBird.Utility.pdb" target="lib/net45/" />
     <file src="TBird.Utility.WinStore/bin/Release/TBird.Utility.WinStore.dll" target="lib/netcore45/TBird.Utility.dll" />
     <file src="TBird.Utility.WinStore/bin/Release/TBird.Utility.WinStore.pdb" target="lib/netcore45/TBird.Utility.pdb" />
-    <file src="TBird.Utility.WP8/bin/Release/TBird.Utility.WP8.dll" target="lib/windowsphone8/TBird.Utility.dll" />
-    <file src="TBird.Utility.WP8/bin/Release/TBird.Utility.WP8.pdb" target="lib/windowsphone8/TBird.Utility.pdb" />
+    <file src="TBird.Utility.WP8/bin/Release/TBird.Utility.WP8.dll" target="lib/wp8/TBird.Utility.dll" />
+    <file src="TBird.Utility.WP8/bin/Release/TBird.Utility.WP8.pdb" target="lib/wp8/TBird.Utility.pdb" />
   </files>
 </package>

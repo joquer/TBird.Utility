@@ -69,6 +69,7 @@
     <Compile Include="TestUtils.cs" />
     <Compile Include="TextUtilityTestFixture.cs" />
     <Compile Include="TypeHelperTestFixture.cs" />
+    <Compile Include="TypeUtilsTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

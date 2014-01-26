@@ -114,6 +114,7 @@
     <Compile Include="Strings.Designer.cs" />
     <Compile Include="TextUtility.cs" />
     <Compile Include="TypeHelper.cs" />
+    <Compile Include="TypeUtils.cs" />
     <Compile Include="ViewModels\AboutBoxViewModel.cs" />
     <Compile Include="ViewModels\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
