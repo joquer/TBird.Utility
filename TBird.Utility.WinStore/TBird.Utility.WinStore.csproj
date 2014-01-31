@@ -9,8 +9,8 @@
     <ProjectGuid>{D6A1E5AF-65E0-4A35-9801-FB32B89C01FC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TBird.Utility.WinStore</RootNamespace>
-    <AssemblyName>TBird.Utility.WinStore</AssemblyName>
+    <RootNamespace>TBird.Utility</RootNamespace>
+    <AssemblyName>TBird.Utility</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
