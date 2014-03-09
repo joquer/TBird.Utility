@@ -24,6 +24,33 @@ namespace TBird.Utility.Mvvm
 
         #endregion // Fields
 
+#if WINDOWS_PHONE || NETFX_CORE
+
+        public event EventHandler CanExecuteChanged;
+
+#else
+
+        public event EventHandler CanExecuteChanged
+        {
+            add
+            {
+                if (this.canExecute != null)
+                {
+                    CommandManager.RequerySuggested += value;
+                }
+            }
+
+            remove
+            {
+                if (this.canExecute != null)
+                {
+                    CommandManager.RequerySuggested -= value;
+                }
+            }
+        }
+
+#endif
+
         #region Constructors
 
         /// <summary>
@@ -47,20 +74,6 @@ namespace TBird.Utility.Mvvm
         #endregion // Constructors
 
         #region ICommand Members
-
-#if WINDOWS_PHONE || NETFX_CORE
-
-        public event EventHandler CanExecuteChanged;
-
-#else
-
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-
-#endif
 
         [DebuggerStepThrough]
         public bool CanExecute(object parameter)
