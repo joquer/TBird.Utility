@@ -1,4 +1,15 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="IEnumerationUpdateProvider.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Defines the functionality for a class that updates enumeration sources.  This interface is used by
+//   the <see cref="EnumerationUpdater" /> class to update a data source to match the Enumeration definitions
+//   in C# code.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System;
     using System.Collections.Generic;

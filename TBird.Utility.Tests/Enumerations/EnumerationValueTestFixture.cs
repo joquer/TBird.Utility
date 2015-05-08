@@ -1,4 +1,4 @@
-﻿namespace TBird.Utility.Tests.Enumerations
+﻿                                                                        namespace TBird.Utility.Tests.Enumerations
 {
     using TBird.Utility.Enumerations;
 

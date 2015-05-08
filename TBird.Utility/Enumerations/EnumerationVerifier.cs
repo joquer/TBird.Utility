@@ -1,4 +1,13 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="EnumerationVerifier.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Defines the EnumerationVerifier type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System;
     using System.Collections.Generic;

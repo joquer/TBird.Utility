@@ -1,7 +1,18 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="EnumerationPropertyBindingAttribute.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Tags a property of an enumeration as a value that should be synchronized with the database.
+//   The database will be the same as the Property name, unless another value is specified in the
+//   property.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System;
-#if !(NETFX_CORE || WINDOWS_PHONE)
+#if !NEXTFX_CORE
     using System.Diagnostics.CodeAnalysis;
 #endif
 
@@ -10,7 +21,7 @@
     /// The database will be the same as the Property name, unless another value is specified in the
     /// <see cref="ColumnName"/> property.
     /// </summary>
-#if !(NETFX_CORE || WINDOWS_PHONE)
+#if !NETFX_CORE
     [ExcludeFromCodeCoverage]
 #endif
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]

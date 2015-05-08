@@ -1,13 +1,20 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="EnumerationSerializer.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Defines the EnumerationSerializer type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System;
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
-#if !NETFX_CORE
     [Serializable]
-#endif
     public class EnumerationSerializer<TEnumeration> : IXmlSerializable where TEnumeration : Enumeration<TEnumeration>
     {
         public EnumerationSerializer()

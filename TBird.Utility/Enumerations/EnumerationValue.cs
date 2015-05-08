@@ -1,4 +1,13 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="EnumerationValue.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Defines the EnumerationValue type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System.Collections.Generic;
     using System.Diagnostics;
@@ -87,7 +96,7 @@
             return other.Value == this.Value && other.Name == this.Name && other.DisplayName == this.DisplayName;
         }
 
-#if !(NETFX_CORE || WINDOWS_PHONE)
+#if !NETFX_CORE
         [ExcludeFromCodeCoverage]
 #endif
         public override int GetHashCode()

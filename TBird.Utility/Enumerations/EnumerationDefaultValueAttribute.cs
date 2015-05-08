@@ -1,14 +1,23 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="EnumerationDefaultValueAttribute.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Tags a field in an enumeration as the default value for the Enumeration class.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System;
-#if !(NETFX_CORE || WINDOWS_PHONE)
+#if !NEXTFX_CORE
     using System.Diagnostics.CodeAnalysis;
 #endif
 
     /// <summary>
     /// Tags a field in an enumeration as the default value for the Enumeration class.
     /// </summary>
-#if !(NETFX_CORE || WINDOWS_PHONE)
+#if !NETFX_CORE
     [ExcludeFromCodeCoverage]
 #endif
     [AttributeUsage(AttributeTargets.Field)]

@@ -1,4 +1,10 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// -----------------------------------------------------------------------
+// <copyright file="EnumerationType.cs" company="">
+// TODO: Update copyright text.
+// </copyright>
+// -----------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System;
     using System.Collections.Generic;

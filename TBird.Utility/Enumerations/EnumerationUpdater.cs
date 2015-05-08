@@ -1,4 +1,13 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="EnumerationUpdater.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Defines the EnumerationUpdater type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
     using System;
     using System.Collections.Generic;
@@ -15,26 +24,19 @@
     {
         private readonly IEnumerationUpdateProvider updater;
 
-        private enum Operation
-        {
-            Insert,
-
-            Update,
-        }
-
-        private class UpdaterAction
-        {
-            public Operation UpdateOperation { get; set; }
-
-            public EnumerationValue CodeValue { get; set; }
-        }
-
         public EnumerationUpdater(IEnumerationUpdateProvider updateProvider)
         {
             Contract.Requires(updateProvider != null);
             Contract.Ensures(this.updater != null);
             Contract.Ensures(this.updater == updateProvider);
             this.updater = updateProvider;
+        }
+
+        private enum Operation
+        {
+            Insert,
+
+            Update,
         }
 
 #if !NETFX_CORE
@@ -230,6 +232,13 @@
             }
 
             this.updater.Clear(bindings);
+        }
+
+        private class UpdaterAction
+        {
+            public Operation UpdateOperation { get; set; }
+
+            public EnumerationValue CodeValue { get; set; }
         }
     }
 }

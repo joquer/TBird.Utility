@@ -1,5 +1,15 @@
-﻿namespace TBird.Utility.Enumerations
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AdoNetUpdateProvider.cs" company="Advisory Board Company - Crimson">
+//   Copyright © 2014 Advisory Board Company - Crimson
+// </copyright>
+// <summary>
+//   Defines the AdoNetUpdateProvider class.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace TBird.Utility.Enumerations
 {
+    using System;
     using System.Collections.Generic;
     using System.Data.Common;
     using System.Data.SqlClient;
